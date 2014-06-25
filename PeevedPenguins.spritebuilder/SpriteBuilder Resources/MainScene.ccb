@@ -460,7 +460,7 @@
 		<key>customClass</key>
 		<string>MainScene</string>
 		<key>displayName</key>
-		<string>MainScene</string>
+		<string>CCnode</string>
 		<key>memberVarAssignmentName</key>
 		<string></string>
 		<key>memberVarAssignmentType</key>
