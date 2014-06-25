@@ -50,8 +50,5 @@
     
 }
 
-- (void) retry{
-    
-}
 
 @end
