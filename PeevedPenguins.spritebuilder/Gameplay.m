@@ -31,6 +31,8 @@
     // nothing shall collide with our invisible nodes
     _pullbackNode.physicsBody.collisionMask = @[];
     _mouseJointNode.physicsBody.collisionMask = @[];
+    
+    _physicsNode.collisionDelegate = self;
 }
 
 // called on every touch in this scene
@@ -61,7 +63,6 @@
         // create a joint to keep the penguin fixed to the scoop until the catapult is released
         _penguinCatapultJoint = [CCPhysicsJoint connectedPivotJointWithBodyA:_currentPenguin.physicsBody bodyB:_catapultArm.physicsBody anchorA:_currentPenguin.anchorPointInPoints];
         
-        _physicsNode.collisionDelegate = self;
         
     }
 }
