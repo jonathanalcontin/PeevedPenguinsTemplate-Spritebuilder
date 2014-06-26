@@ -34,10 +34,7 @@
 // called on every touch in this scene
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     [self launchPenguin];
-}
-
--(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
-{
+    
     CGPoint touchLocation = [touch locationInNode:_contentNode];
     
     // start catapult dragging when a touch inside of the catapult arm occurs
@@ -50,6 +47,7 @@
         _mouseJoint = [CCPhysicsJoint connectedSpringJointWithBodyA:_mouseJointNode.physicsBody bodyB:_catapultArm.physicsBody anchorA:ccp(0, 0) anchorB:ccp(34, 138) restLength:0.f stiffness:3000.f damping:150.f];
     }
 }
+
 
 
 - (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
