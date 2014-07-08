@@ -9,7 +9,6 @@
 #import "Gameplay.h"
 #import "CCPhysics+ObjectiveChipmunk.h"
 #import "Penguin.h"
-#import "MainScene.h"
 
 @implementation Gameplay
 {
@@ -32,7 +31,7 @@
 - (void)didLoadFromCCB {
     // tell this scene to accept touches
     self.userInteractionEnabled = TRUE;
-    CCScene *level = [CCBReader loadAsScene:@"Level1"];
+    CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
     [_levelNode addChild:level];
     // visualize physics bodies & joints
     _physicsNode.debugDraw = TRUE;
