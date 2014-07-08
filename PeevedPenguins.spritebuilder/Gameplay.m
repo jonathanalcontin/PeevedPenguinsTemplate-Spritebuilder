@@ -9,6 +9,7 @@
 #import "Gameplay.h"
 #import "CCPhysics+ObjectiveChipmunk.h"
 #import "Penguin.h"
+#import "MainScene.h"
 
 @implementation Gameplay
 {
