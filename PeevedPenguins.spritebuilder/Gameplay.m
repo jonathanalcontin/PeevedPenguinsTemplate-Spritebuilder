@@ -92,28 +92,28 @@
     [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"Gameplay"]];
 }
 
-
-
-- (void)releaseCatapult {
-    if (_mouseJoint != nil)
-    {
-        // releases the joint and lets the catapult snap back
-        [_mouseJoint invalidate];
-        _mouseJoint = nil;
-        // releases the joint and lets the penguin fly
-        [_penguinCatapultJoint invalidate];
-        _penguinCatapultJoint = nil;
-        
-        // after snapping rotation is fine
-        _currentPenguin.physicsBody.allowsRotation = TRUE;
-        
-//        // follow the flying penguin
-        _followPenguin = [CCActionFollow actionWithTarget:_currentPenguin worldBoundary:self.boundingBox];
-        [_contentNode runAction:_followPenguin];
-        
-     _currentPenguin.launched = TRUE;
-    }
-}
+//
+//
+//- (void)releaseCatapult {
+//    if (_mouseJoint != nil)
+//    {
+//        // releases the joint and lets the catapult snap back
+//        [_mouseJoint invalidate];
+//        _mouseJoint = nil;
+//        // releases the joint and lets the penguin fly
+//        [_penguinCatapultJoint invalidate];
+//        _penguinCatapultJoint = nil;
+//        
+//        // after snapping rotation is fine
+//        _currentPenguin.physicsBody.allowsRotation = TRUE;
+//        
+////        // follow the flying penguin
+//        _followPenguin = [CCActionFollow actionWithTarget:_currentPenguin worldBoundary:self.boundingBox];
+//        [_contentNode runAction:_followPenguin];
+//        
+//     _currentPenguin.launched = TRUE;
+//    }
+//}
 
 -(void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
