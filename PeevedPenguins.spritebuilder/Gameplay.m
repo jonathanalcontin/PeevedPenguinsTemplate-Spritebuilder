@@ -106,8 +106,8 @@
 //        // follow the flying penguin
         _followPenguin = [CCActionFollow actionWithTarget:_currentPenguin worldBoundary:self.boundingBox];
         [_contentNode runAction:_followPenguin];
-//        
-//        _currentPenguin.launched = TRUE;
+        
+     _currentPenguin.launched = TRUE;
     }
 }
 
@@ -133,8 +133,8 @@
     [_physicsNode addChild:penguin];
     
     // manually create & apply a force to launch the penguin
-    CGPoint launchDirection = ccp(100, 100);
-    CGPoint force = ccpMult(launchDirection, 8000);
+    CGPoint launchDirection = ccp(1, 0);
+    CGPoint force = ccpMult(launchDirection, 16000);
     [penguin.physicsBody applyForce:force];
     
     
